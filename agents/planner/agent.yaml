@@ -1,0 +1,9 @@
+name: planner
+description: Read-only planning agent
+prompt_files:
+  - agents/planner/prompts/system.md
+enabled_tools:
+  - read
+  - grep
+  - find
+  - ls

@@ -1,0 +1,27 @@
+platform:
+  default_agent: default
+  agents_dir: agents
+  workflow_mode: single
+  default_pipeline: default-coding-pipeline
+  intent_recognition_enabled: false
+  tool_execution_mode: controlled
+  allow_unsafe_auto_exec: false
+
+model:
+  provider: deepseek
+  api_base: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  model: deepseek-chat
+  temperature: 0.0
+
+agent:
+  max_turns: 8
+
+workflow:
+  target: example-notes.md
+  prompts_dir: prompts
+  workspace_root: .
+
+tui:
+  mode: agent
+  system_prompt: You are a helpful coding assistant.

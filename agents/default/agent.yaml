@@ -1,0 +1,12 @@
+name: default
+description: General-purpose coding agent
+prompt_files:
+  - agents/default/prompts/system.md
+enabled_tools:
+  - read
+  - write
+  - edit
+  - bash
+  - grep
+  - find
+  - ls

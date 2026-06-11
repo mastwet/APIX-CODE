@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "apix-code"
+version = "0.1.0"
+description = "APIX-Code: AI coding agent powered by APIX-CORE"
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=0.3",
+    "langchain-openai>=0.3",
+    "langchain-deepseek>=0.1",
+    "langchain-ollama>=0.3",
+    "langgraph>=0.4",
+    "pydantic>=2.0",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+    "textual>=2.0",
+    "inflect>=7.0",
+]
+
+[project.optional-dependencies]
+mcp = ["langchain-mcp-adapters>=0.1"]
+
+[project.scripts]
+apix-code = "cli:main"

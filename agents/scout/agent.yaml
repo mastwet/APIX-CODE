@@ -1,0 +1,9 @@
+name: scout
+description: Read-only reconnaissance agent
+prompt_files:
+  - agents/scout/prompts/system.md
+enabled_tools:
+  - read
+  - grep
+  - find
+  - ls

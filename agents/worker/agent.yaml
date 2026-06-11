@@ -1,0 +1,12 @@
+name: worker
+description: Full tool access coding agent
+prompt_files:
+  - agents/worker/prompts/system.md
+enabled_tools:
+  - read
+  - write
+  - edit
+  - bash
+  - grep
+  - find
+  - ls

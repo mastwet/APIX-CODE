@@ -1,0 +1,25 @@
+pipelines:
+  - name: default-coding-pipeline
+    description: Sequential scout -> planner -> worker pipeline.
+    stages:
+      - id: recon
+        agent: scout
+        task_template: |
+          Original request:
+          {request}
+      - id: plan
+        agent: planner
+        task_template: |
+          Request:
+          {request}
+
+          Scout output:
+          {previous}
+      - id: apply
+        agent: worker
+        task_template: |
+          Request:
+          {request}
+
+          Plan:
+          {previous}
